@@ -26,13 +26,29 @@
 
 ・４　使用方法
 １、「新規登録」からユーザー登録（登録済みの方は「ログイン」からログイン）
-２、トップページでメモの一覧を確認
-３、新規作成からメモの作成
-４、検索からメモの検索
+<img width="1920" height="1080" alt="スクリーンショット (2)" src="https://github.com/user-attachments/assets/62a516db-fdae-4305-9eba-ddb1960b22e0" />
+２、トップページでメモの一覧を確認<img width="1920" height="1080" alt="スクリーンショット (6)" src="https://github.com/user-attachments/assets/17c2248c-65f0-4c87-b299-8e6fc6cf723a" />
+
+３、新規作成からメモの作成<img width="1920" height="1080" alt="スクリーンショット (11)" src="https://github.com/user-attachments/assets/d90f1700-8895-40a6-9fbe-f3120f0c8ea1" />
+
+４、検索からメモの検索<img width="1920" height="1080" alt="スクリーンショット (9)" src="https://github.com/user-attachments/assets/94deb821-6352-444e-84cc-cc5d5b24f92b" />
+<img width="1920" height="1080" alt="スクリーンショット (10)" src="https://github.com/user-attachments/assets/5e87fb33-a97c-4dd8-ba2d-48a5664bc18f" />
+
 ５、削除、編集からメモの削除、編集を行うことができる
+<img width="1920" height="1080" alt="スクリーンショット (8)" src="https://github.com/user-attachments/assets/cb361e32-b8f3-4fad-84e2-8873ea74db6e" />
+<img width="1920" height="1080" alt="スクリーンショット (7)" src="https://github.com/user-attachments/assets/a4e31fad-7279-4c1d-8b00-0b5aaf96253a" />
 
 ・５　ディレクトリ構成
 
+
+
+
+
+
+
+
+
+ 
 memo
 │  .classpath
 │  .project
