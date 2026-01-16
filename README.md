@@ -1,30 +1,30 @@
 # memo
 
-目次
-・１プロジェクト概要
-・２使用技術
-・３主な機能
-・４使用方法
-・５ディレクトリ構成
+目次<br>
+・１プロジェクト概要<br>
+・２使用技術<br>
+・３主な機能<br>
+・４使用方法<br>
+・５ディレクトリ構成<br>
+<br><br>
 
+・１　プロジェクト概要<br>
+<br>
+本アプリは学習の過程で行ったJAVA、SQL、サーブレット、JSPなどの成果を確認するために制作されたメモアプリです。<br>
+簡易的なメモアプリではありますが、動作する形に落とし込むことができました。<br>
 
-・１　プロジェクト概要
+・２　使用技術<br>
+-H2　（開発用ＤＢ）<br>
+-openjdk 21.0.2<br>
+-HTML<br>
+-Eclipse 4.30.0<br>
 
-本アプリは学習の過程で行ったJAVA、SQL、サーブレット、JSPなどの成果を確認するために制作されたメモアプリです。
-簡易的なメモアプリではありますが、動作する形に落とし込むことができました。
+・３　主な機能<br>
+-ログイン、新規登録機能<br>
+-メモの一覧表示、メモの追加、削除、編集<br>
+-メモの内容の検索機能<br>
 
-・２　使用技術
--H2　（開発用ＤＢ）
--openjdk 21.0.2
--HTML
--Eclipse 4.30.0
-
-・３　主な機能
--ログイン、新規登録機能
--メモの一覧表示、メモの追加、削除、編集
--メモの内容の検索機能
-
-・４　使用方法
+・４　使用方法<br>
 １、「新規登録」からユーザー登録（登録済みの方は「ログイン」からログイン）
 <img width="1920" height="1080" alt="スクリーンショット (2)" src="https://github.com/user-attachments/assets/62a516db-fdae-4305-9eba-ddb1960b22e0" />
 ２、トップページでメモの一覧を確認<img width="1920" height="1080" alt="スクリーンショット (6)" src="https://github.com/user-attachments/assets/17c2248c-65f0-4c87-b299-8e6fc6cf723a" />
@@ -38,119 +38,93 @@
 <img width="1920" height="1080" alt="スクリーンショット (8)" src="https://github.com/user-attachments/assets/cb361e32-b8f3-4fad-84e2-8873ea74db6e" />
 <img width="1920" height="1080" alt="スクリーンショット (7)" src="https://github.com/user-attachments/assets/a4e31fad-7279-4c1d-8b00-0b5aaf96253a" />
 
-・５　ディレクトリ構成
-
-
-
-
-
-
-
-
-
- 
-memo
-│  .classpath
-│  .project
-│
-├─.settings
-│      .jsdtscope
-│      org.eclipse.core.resources.prefs
-│      org.eclipse.jdt.core.prefs
-│      org.eclipse.wst.common.component
-│      org.eclipse.wst.common.project.facet.core.xml
-│      org.eclipse.wst.jsdt.ui.superType.container
-│      org.eclipse.wst.jsdt.ui.superType.name
-│
-├─build
-│  └─classes
-│      ├─dao
-│      │      AccountsDAO.class
-│      │      memosDAO.class
-│      │
-│      ├─memo
-│      ├─model
-│      │      Account.class
-│      │      Login.class
-│      │      LoginLogic.class
-│      │      memo.class
-│      │      memoLogic.class
-│      │      registration.class
-│      │
-│      ├─servlet
-│      │      LoginServlet.class
-│      │      MemoAddServlet.class
-│      │      MemoDelServlet.class
-│      │      MemoEdiServlet.class
-│      │      MemoMainServlet.class
-│      │      MemoRegistrationServlet.class
-│      │      MemoSearchServlet.class
-│      │      MemoSearchUpServlet.class
-│      │      MemoUpdateServlet.class
-│      │      MemoUpServlet.class
-│      │      RegistrationServlet.class
-│      │      UserServlet.class
-│      │      WelcomeServlet.class
-│      │
-│      └─test
-│              AccounntsDAOTest.class
-│              LoginLogicTest.class
-│              memosDAOTest.class
-│
-└─src
-    └─main
-        ├─java
-        │  ├─dao
-        │  │      AccountsDAO.java
-        │  │      memosDAO.java
-        │  │
-        │  ├─memo
-        │  ├─model
-        │  │      Account.java
-        │  │      Login.java
-        │  │      LoginLogic.java
-        │  │      memo.java
-        │  │      memoLogic.java
-        │  │      registration.java
-        │  │
-        │  ├─servlet
-        │  │      LoginServlet.java
-        │  │      MemoAddServlet.java
-        │  │      MemoDelServlet.java
-        │  │      MemoEdiServlet.java
-        │  │      MemoMainServlet.java
-        │  │      MemoRegistrationServlet.java
-        │  │      MemoSearchServlet.java
-        │  │      MemoSearchUpServlet.java
-        │  │      MemoUpdateServlet.java
-        │  │      MemoUpServlet.java
-        │  │      RegistrationServlet.java
-        │  │      UserServlet.java
-        │  │      WelcomeServlet.java
-        │  │
-        │  └─test
-        │          AccounntsDAOTest.java
-        │          LoginLogicTest.java
-        │          memosDAOTest.java
-        │
-        └─webapp
-            ├─META-INF
-            │      MANIFEST.MF
-            │
-            └─WEB-INF
-                │  web.xml
-                │
-                ├─jsp
-                │      login.jsp
-                │      MemoEdit.jsp
-                │      memoList.jsp
-                │      MemoRegistration.jsp
-                │      memoSearch.jsp
-                │      menuAll.jsp
-                │      user_register.jsp
-                │      welcome.jsp
-                │
-                └─lib
-                        h2-2.4.240.jar
-                        jakarta.servlet.jsp.jstl-3.0.1.jar
+・５　ディレクトリ構成<br>
+```
+memo/
+├── README.md
+├── memo/
+│   ├── build/
+│   │   └── classes/
+│   │       ├── dao/
+│   │       │   ├── AccountsDAO.class
+│   │       │   └── memosDAO.class
+│   │       ├── model/
+│   │       │   ├── Account.class
+│   │       │   ├── Login.class
+│   │       │   ├── LoginLogic.class
+│   │       │   ├── memo.class
+│   │       │   ├── memoLogic.class
+│   │       │   └── registration.class
+│   │       ├── servlet/
+│   │       │   ├── LoginServlet.class
+│   │       │   ├── MemoAddServlet.class
+│   │       │   ├── MemoDelServlet.class
+│   │       │   ├── MemoEdiServlet.class
+│   │       │   ├── MemoMainServlet.class
+│   │       │   ├── MemoRegistrationServlet.class
+│   │       │   ├── MemoSearchServlet.class
+│   │       │   ├── MemoSearchUpServlet.class
+│   │       │   ├── MemoUpServlet.class
+│   │       │   ├── MemoUpdateServlet.class
+│   │       │   ├── RegistrationServlet.class
+│   │       │   ├── UserServlet.class
+│   │       │   └── WelcomeServlet.class
+│   │       └── test/
+│   │           ├── AccounntsDAOTest.class
+│   │           ├── LoginLogicTest.class
+│   │           └── memosDAOTest.class
+│   └── src/
+│       └── main/
+│           ├── java/
+│           │   ├── dao/
+│           │   │   ├── AccountsDAO.java
+│           │   │   └── memosDAO.java
+│           │   ├── model/
+│           │   │   ├── Account.java
+│           │   │   ├── Login.java
+│           │   │   ├── LoginLogic.java
+│           │   │   ├── memo.java
+│           │   │   ├── memoLogic.java
+│           │   │   └── registration.java
+│           │   ├── servlet/
+│           │   │   ├── LoginServlet.java
+│           │   │   ├── MemoAddServlet.java
+│           │   │   ├── MemoDelServlet.java
+│           │   │   ├── MemoEdiServlet.java
+│           │   │   ├── MemoMainServlet.java
+│           │   │   ├── MemoRegistrationServlet.java
+│           │   │   ├── MemoSearchServlet.java
+│           │   │   ├── MemoSearchUpServlet.java
+│           │   │   ├── MemoUpServlet.java
+│           │   │   ├── MemoUpdateServlet.java
+│           │   │   ├── RegistrationServlet.java
+│           │   │   ├── UserServlet.java
+│           │   │   └── WelcomeServlet.java
+│           │   └── test/
+│           │       ├── AccounntsDAOTest.java
+│           │       ├── LoginLogicTest.java
+│           │       └── memosDAOTest.java
+│           └── webapp/
+│               ├── META-INF/
+│               │   └── MANIFEST.MF
+│               └── WEB-INF/
+│                   ├── jsp/
+│                   │   ├── MemoEdit.jsp
+│                   │   ├── MemoRegistration.jsp
+│                   │   ├── login.jsp
+│                   │   ├── memoList.jsp
+│                   │   ├── memoSearch.jsp
+│                   │   ├── menuAll.jsp
+│                   │   ├── user_register.jsp
+│                   │   └── welcome.jsp
+│                   ├── lib/
+│                   │   ├── h2-2.4.240.jar
+│                   │   ├── jakarta.servlet.jsp.jstl-3.0.1.jar
+│                   │   └── jakarta.servlet.jsp.jstl-api-3.0.0.jar
+│                   └── web.xml
+├── データ設計.xlsx
+├── 回顧.txt
+├── 画面設計書.xlsx
+└── 要件定義.txt
+```
     
