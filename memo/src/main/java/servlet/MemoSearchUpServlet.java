@@ -4,13 +4,13 @@ package servlet;
 import java.io.IOException;
 import java.util.List;
 
-import dao.memosDAO;
+import dao.MemosDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.memo;
+import model.Memo;
 
 public class MemoSearchUpServlet extends HttpServlet {
 
@@ -30,8 +30,8 @@ public class MemoSearchUpServlet extends HttpServlet {
         
         String memo  = request.getParameter("memo");
 
-        memosDAO dao = new memosDAO();
-        List<memo> memoList = dao.searchmemo(userId,memo);
+        MemosDAO dao = new MemosDAO();
+        List<Memo> memoList = dao.searchmemo(userId,memo);
 
         session.setAttribute("memoList", memoList);
        

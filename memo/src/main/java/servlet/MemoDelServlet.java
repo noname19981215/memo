@@ -2,7 +2,7 @@ package servlet;
 
 import java.io.IOException;
 
-import dao.memosDAO;
+import dao.MemosDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -25,7 +25,7 @@ public class MemoDelServlet extends HttpServlet {
 
         int memoId = Integer.parseInt(request.getParameter("id"));
 
-        memosDAO dao = new memosDAO();
+        MemosDAO dao = new MemosDAO();
         dao.delete(memoId, userId);
 
         response.sendRedirect("MemoMainServlet");

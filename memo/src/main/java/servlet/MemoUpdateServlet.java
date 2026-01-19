@@ -2,14 +2,13 @@ package servlet;
 
 import java.io.IOException;
 
+import dao.MemosDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-
-import dao.memosDAO;
-import model.memo;
+import model.Memo;
 
 public class MemoUpdateServlet extends HttpServlet {
 
@@ -32,9 +31,9 @@ public class MemoUpdateServlet extends HttpServlet {
         String text  = request.getParameter("memo");
         String day   = request.getParameter("date");
 
-        memo m = new memo(id, userId, title, text, day);
+        Memo m = new Memo(id, userId, title, text, day);
 
-        memosDAO dao = new memosDAO();
+        MemosDAO dao = new MemosDAO();
         dao.update(m);
 
         response.sendRedirect("MemoMainServlet");

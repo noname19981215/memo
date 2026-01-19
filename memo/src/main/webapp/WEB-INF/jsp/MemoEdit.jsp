@@ -1,8 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="model.memo" %>
+<%@ page import="model.Memo" %>
 
 <%
-memo m = (memo) request.getAttribute("memo");
+Memo m = (Memo) request.getAttribute("memo");
 %>
 
 <h2>メモ編集</h2>

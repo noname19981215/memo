@@ -2,13 +2,13 @@ package servlet;
 
 import java.io.IOException;
 
-import dao.memosDAO;
+import dao.MemosDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.memo;
+import model.Memo;
 
 public class MemoAddServlet extends HttpServlet {
 
@@ -34,10 +34,10 @@ public class MemoAddServlet extends HttpServlet {
         String day   = request.getParameter("date");
 
         // ③ memo オブジェクト生成
-        memo m = new memo(userId, title, text, day);
+        Memo m = new Memo(userId, title, text, day);
 
         // ④ DAO で登録
-        memosDAO dao = new memosDAO();
+        MemosDAO dao = new MemosDAO();
         boolean result = dao.create(m);
 
         // ⑤ 成功したら一覧へ

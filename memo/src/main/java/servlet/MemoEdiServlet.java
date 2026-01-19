@@ -2,13 +2,13 @@ package servlet;
 
 import java.io.IOException;
 
-import dao.memosDAO;
+import dao.MemosDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.memo;
+import model.Memo;
 
 public class MemoEdiServlet extends HttpServlet {
 
@@ -26,8 +26,8 @@ public class MemoEdiServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
 
-        memosDAO dao = new memosDAO();
-        memo m = dao.findById(id, userId);
+        MemosDAO dao = new MemosDAO();
+        Memo m = dao.findById(id, userId);
 
         if (m == null) {
             response.sendRedirect("MemoMainServlet");

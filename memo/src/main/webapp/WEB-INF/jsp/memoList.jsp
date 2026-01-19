@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.memo" %>
+<%@ page import="model.Memo" %>
 
 <!DOCTYPE html>
 <html>
@@ -18,14 +18,14 @@
 <hr>
 <%
     // セッションから memoList を取得
-    List<memo> memoList = (List<memo>) session.getAttribute("memoList");
+    List<Memo> MemoList = (List<Memo>) session.getAttribute("memoList");
 
-    if (memoList == null || memoList.isEmpty()) {
+    if (MemoList == null || MemoList.isEmpty()) {
 %>
         <p>メモは登録されていません。</p>
 <%
     } else {
-        for (memo m : memoList) {//
+        for (Memo m : MemoList) {//
 %>
             <h3><%= m.getTitle() %></h3>
             <p><%= m.getText() %><%= m.getDay() %></p>
