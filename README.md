@@ -18,6 +18,7 @@
 -openjdk 21.0.2<br>
 -HTML<br>
 -Eclipse 4.30.0<br>
+-Jakarta Standard Tag Library API » 3.0.0<br>
 
 ・３　主な機能<br>
 -ログイン、新規登録機能<br>
