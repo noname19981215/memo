@@ -1,4 +1,4 @@
-FROM tomcat:10.1-jdk21-corretto
+FROM tomcat:10.1-jdk21
 
 # 2. 作業場所の設定
 WORKDIR /app
