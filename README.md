@@ -43,20 +43,22 @@
 ・５　ディレクトリ構成<br>
 ```
 memo/
+├── Dockerfile
 ├── README.md
 ├── memo/
+│   ├── Dockerfile
 │   ├── build/
 │   │   └── classes/
 │   │       ├── dao/
 │   │       │   ├── AccountsDAO.class
-│   │       │   └── memosDAO.class
+│   │       │   └── MemosDAO.class
 │   │       ├── model/
 │   │       │   ├── Account.class
 │   │       │   ├── Login.class
 │   │       │   ├── LoginLogic.class
-│   │       │   ├── memo.class
-│   │       │   ├── memoLogic.class
-│   │       │   └── registration.class
+│   │       │   ├── Memo.class
+│   │       │   ├── MemoLogic.class
+│   │       │   └── Registration.class
 │   │       ├── servlet/
 │   │       │   ├── LoginServlet.class
 │   │       │   ├── MemoAddServlet.class
@@ -74,20 +76,20 @@ memo/
 │   │       └── test/
 │   │           ├── AccounntsDAOTest.class
 │   │           ├── LoginLogicTest.class
-│   │           └── memosDAOTest.class
+│   │           └── MemosDAOTest.class
 │   └── src/
 │       └── main/
 │           ├── java/
 │           │   ├── dao/
 │           │   │   ├── AccountsDAO.java
-│           │   │   └── memosDAO.java
+│           │   │   └── MemosDAO.java
 │           │   ├── model/
 │           │   │   ├── Account.java
 │           │   │   ├── Login.java
 │           │   │   ├── LoginLogic.java
-│           │   │   ├── memo.java
-│           │   │   ├── memoLogic.java
-│           │   │   └── registration.java
+│           │   │   ├── Memo.java
+│           │   │   ├── MemoLogic.java
+│           │   │   └── Registration.java
 │           │   ├── servlet/
 │           │   │   ├── LoginServlet.java
 │           │   │   ├── MemoAddServlet.java
@@ -105,7 +107,7 @@ memo/
 │           │   └── test/
 │           │       ├── AccounntsDAOTest.java
 │           │       ├── LoginLogicTest.java
-│           │       └── memosDAOTest.java
+│           │       └── MemosDAOTest.java
 │           └── webapp/
 │               ├── META-INF/
 │               │   └── MANIFEST.MF
