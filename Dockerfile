@@ -1,28 +1,30 @@
+# 1. ベースイメージ: Tomcat 10.1 (Java 21)
 FROM tomcat:10.1-jdk21
 
-# 2. 作業場所の設定
+# 2. 作業ディレクトリ
 WORKDIR /app
 
 # 3. ファイルのコピー
-COPY src ./src
-COPY webapp ./webapp
+COPY memo/src/main/java ./src
+COPY memo/src/main/webapp ./webapp
 
-# 4. コンパイル
+# 4. コンパイル準備
 RUN mkdir -p webapp/WEB-INF/classes
 RUN find src -name "*.java" > sources.txt
 
-# -encoding UTF-8を追加しました
+# 5. コンパイル実行
 RUN javac -encoding UTF-8 -d webapp/WEB-INF/classes \
-    -cp /usr/local/tomcat/lib/servlet-api.jar \
+    -cp "/usr/local/tomcat/lib/servlet-api.jar:webapp/WEB-INF/lib/*" \
     @sources.txt
 
-# 5. 配置
+# 6. アプリ配置
+# TomcatのROOTアプリとして配置
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 RUN mv webapp /usr/local/tomcat/webapps/ROOT
 
-# 6. ポート設定
+# 7. Render用ポート設定
 ENV PORT=8080
 EXPOSE 8080
 
-# 7. 起動コマンド
+# 8. 起動
 CMD ["catalina.sh", "run"]
