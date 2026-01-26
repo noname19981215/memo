@@ -1,4 +1,4 @@
-FROM tomcat:10.1-jdk21-corretto
+FROM tomcat:10.1-jdk21
 
 # 2. 作業場所の設定
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY webapp ./webapp
 RUN mkdir -p webapp/WEB-INF/classes
 RUN find src -name "*.java" > sources.txt
 
-# -encoding UTF-8を追加しました
+# -encoding UTF
 RUN javac -encoding UTF-8 -d webapp/WEB-INF/classes \
     -cp /usr/local/tomcat/lib/servlet-api.jar \
     @sources.txt
