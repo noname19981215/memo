@@ -12,21 +12,16 @@ import model.Memo;
 
 public class MemosDAO { 
  
- //  tcp://localhost/ を削除
  private final String JDBC_URL = "jdbc:h2:~/memo";
  private final String DB_USER = "sa";
  private final String DB_PASS = "";
 
- // コンストラクタを追加ここでテーブルなかったら作る
  public MemosDAO() {
      try {
          Class.forName("org.h2.Driver");
      } catch (ClassNotFoundException e) {
          throw new IllegalStateException("JDBCドライバを読み取れませんでした");
      }
-
-     // データ設計書に基づいたテーブル作成
-     // ID: INT (PK, 自動採番), USER_ID: VARCHAR(10), MEMO: VARCHAR(100), TITLE: VARCHAR, DATE: DATE
      String sql = "CREATE TABLE IF NOT EXISTS MEMOS (" +
                   "ID INT PRIMARY KEY AUTO_INCREMENT, " +
                   "USER_ID VARCHAR(10) NOT NULL, " +

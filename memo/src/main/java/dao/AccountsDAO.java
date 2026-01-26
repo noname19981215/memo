@@ -11,7 +11,6 @@ import model.Login;
 
 
 	public class AccountsDAO {
-	    // 【重要】Render用に tcp://localhost/ を削除済み
 	    private final String JDBC_URL = "jdbc:h2:~/memo";
 	    private final String DB_USER = "sa";
 	    private final String DB_PASS = "";
@@ -24,7 +23,6 @@ import model.Login;
 	            throw new IllegalStateException("JDBCドライバを読み取れませんでした");
 	        }
 
-	        // データ設計書に基づいたテーブル作成
 	        String sql = "CREATE TABLE IF NOT EXISTS ACCOUNTS (" +
 	                     "USER_ID VARCHAR(10) PRIMARY KEY, " +
 	                     "PASS VARCHAR(10) NOT NULL, " +
