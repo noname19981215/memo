@@ -48,7 +48,6 @@ memo/
 ├── Dockerfile
 ├── README.md
 ├── memo/
-│   ├── Dockerfile
 │   ├── build/
 │   │   └── classes/
 │   │       ├── dao/
